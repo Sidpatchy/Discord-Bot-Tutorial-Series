@@ -5,6 +5,7 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import bot
 import asyncio
+import datetime as dt
 
 bot = commands.Bot(command_prefix='!')
 
@@ -16,6 +17,6 @@ async def on_ready():
 # Test command
 @bot.command(pass_context=True)
 async def test(ctx):
-    await ctx.send('Working!')
+    await ctx.send('Working!', file=discord.File('upvote.png'))
 
 bot.run('BOT_TOKEN_HERE')
